@@ -17,8 +17,8 @@ CONFIG_AGENTES = {
         'variacion_temperatura': (-0.05, 0.05)
     },
     'seguridad': {
-        'probabilidad_movimiento': 0.03,
-        'intervalo_verificacion': 0.05,  # MUCHO MÁS RÁPIDO: 50ms en lugar de 200ms
+        'probabilidad_movimiento': 0.01,
+        'intervalo_verificacion': 0.02,  # MUCHO MÁS RÁPIDO: 50ms en lugar de 200ms
         'tiempo_entre_alertas': 5        # Reducido a 5 segundos
     },
     'iluminacion': {
