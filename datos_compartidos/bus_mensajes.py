@@ -54,7 +54,7 @@ class BusMensajes:
             self.estadisticas['mensajes_perdidos'] += 1
             return False
     
-    def recibir_mensaje(self, tiempo_espera=0.1):
+    def recibir_mensaje(self, tiempo_espera=0.5):
         try:
             inicio = time.time()
             while time.time() - inicio < tiempo_espera:
@@ -64,7 +64,7 @@ class BusMensajes:
                         self.estadisticas['mensajes_recibidos'] += 1
                         return mensaje_priorizado.mensaje
                 
-                time.sleep(0.01)  # Pequeña pausa para no saturar
+                time.sleep(0.005)  # Pequeña pausa para no saturar
             return None
             
         except Exception as e:
